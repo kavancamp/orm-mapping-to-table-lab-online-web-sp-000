@@ -6,6 +6,7 @@ class Student
   def initialize(name, grade, id = nil)
    @name = name
    @grade = grade
+   @save = save
    @id = id
   end
 
@@ -33,6 +34,7 @@ class Student
       VALUES(?, ?)
       SQL
       DB[:conn].execute(sql, self.name, self.grade)
+      
   end
 
   def self.create(name:, grade:)
