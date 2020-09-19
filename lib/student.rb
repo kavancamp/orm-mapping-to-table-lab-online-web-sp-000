@@ -5,6 +5,7 @@ class Student
   #  with DB[:conn]
   def initialize(name)
    @name = name
+   @id = id
   end
 
 end
